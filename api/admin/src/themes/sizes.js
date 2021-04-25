@@ -8,11 +8,9 @@ const sizes = {
     width: '24rem',
   },
   margins: {
-    // TODO:
     sm: '10px',
   },
   paddings: {
-    // TODO
     xs: '5px',
     sm: '10px',
     smd: '20px',
