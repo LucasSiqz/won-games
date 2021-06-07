@@ -4,10 +4,12 @@ import gamesMock from 'components/GameCardSlider/mock'
 import highlightMock from 'components/Highlight/mock'
 
 export default function Index(props: HomeTemplateProps) {
+  if (props.data) return <p>{JSON.stringify(props.data, null, 2)}</p>
+
   return <Home {...props} />
 }
 
-export function getServerSideProps() {
+export async function getServerSideProps() {
   return {
     props: {
       banners: bannersMock,
