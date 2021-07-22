@@ -3,6 +3,7 @@ import { withNextRouter } from 'storybook-addon-next-router'
 import GlobalStyles from 'styles/global'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styles/theme'
+import { CartContext, CartContextDefaultValues } from 'hooks/use-cart'
 
 export const parameters = {
   backgrounds: {
@@ -23,10 +24,18 @@ export const parameters = {
 addDecorator(withNextRouter())
 
 export const decorators = [
-  (Story) => (
+  (Story, context) => (
     <ThemeProvider theme={theme}>
-      <GlobalStyles removeBg />
-      <Story />
+      <CartContext.Provider
+        value={{
+          ...CartContextDefaultValues,
+          ...(context?.args?.cartContextValue || {}),
+          ...context.args
+        }}
+      >
+        <GlobalStyles removeBg />
+        <Story />
+      </CartContext.Provider>
     </ThemeProvider>
   )
 ]
