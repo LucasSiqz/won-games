@@ -37,7 +37,6 @@ export interface QueryGames_gamesConnection {
   values: (QueryGames_gamesConnection_values | null)[] | null;
 }
 
-
 export interface QueryGames {
   games: QueryGames_games[];
   gamesConnection: QueryGames_gamesConnection | null;
