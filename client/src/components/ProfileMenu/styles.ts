@@ -36,6 +36,7 @@ export const Link = styled.a<LinkProps>`
   ${({ theme, isActive }) => css`
     background: ${theme.colors.white};
     color: ${theme.colors.black};
+    cursor: pointer;
     text-decoration: none;
     display: flex;
     align-items: center;
