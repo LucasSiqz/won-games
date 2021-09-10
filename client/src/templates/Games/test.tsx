@@ -1,3 +1,4 @@
+import 'session.mock'
 import userEvent from '@testing-library/user-event'
 import { MockedProvider } from '@apollo/client/testing'
 
