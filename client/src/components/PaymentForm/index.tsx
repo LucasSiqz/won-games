@@ -10,9 +10,11 @@ import Heading from 'components/Heading'
 import * as S from './styles'
 
 const PaymentForm = () => {
+  const [disabled, setDisabled] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   const handleChange = async (event: StripeCardElementChangeEvent) => {
+    setDisabled(event.empty)
     setError(event.error ? event.error.message : '')
   }
 
@@ -43,7 +45,11 @@ const PaymentForm = () => {
         )}
       </S.Body>
       <S.Footer>
-        <Button as="a" fullWidth minimal>
+        <Button
+          fullWidth
+          icon={<ShoppingCart />}
+          disabled={disabled || !!error}
+        >
           Continue shopping
         </Button>
         <Button fullWidth icon={<ShoppingCart />}>
