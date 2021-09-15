@@ -20,6 +20,7 @@ export const Footer = styled.div`
     padding: ${theme.spacings.small};
     display: flex;
     align-items: center;
+
     ${ButtonStyles.Wrapper} {
       padding-left: ${theme.spacings.xxsmall};
       padding-right: ${theme.spacings.xxsmall};
@@ -35,5 +36,10 @@ export const Error = styled.p`
     padding-top: ${theme.spacings.xsmall};
     display: flex;
     align-items: center;
+  `}
+`
+export const FreeGames = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.black};
   `}
 `
