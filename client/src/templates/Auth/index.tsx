@@ -27,7 +27,7 @@ const Auth = ({ title, children }: AuthProps) => (
           </S.Subtitle>
         </div>
 
-        <S.Footer>Won Games 2020 © Todos os Direitos Reservados</S.Footer>
+        <S.Footer>Won Games 2021 © Todos os Direitos Reservados</S.Footer>
       </S.BannerContent>
     </S.BannerBlock>
 
